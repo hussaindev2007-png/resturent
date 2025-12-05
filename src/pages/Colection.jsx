@@ -19,7 +19,7 @@ function Collection() {
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
 
-  // 🔹 Fetch products from API using async/await
+  
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -40,7 +40,7 @@ function Collection() {
     fetchProducts();
   }, []);
 
-  // 🔹 Filter products dynamically whenever filters/sort/search change
+  
   useEffect(() => {
     const filterProducts = async () => {
       const visible = await getVisibleProducts(
@@ -57,7 +57,7 @@ function Collection() {
     filterProducts();
   }, [allProducts, selectedCategories, selectedRating, initPriceRange, sortOption, search]);
 
-  // 🔹 Event handlers
+ 
   const onPriceChange = (e) => {
     setInitPriceRange((prev) => ({
       ...prev,
@@ -118,3 +118,4 @@ function Collection() {
 }
 
 export default Collection;
+
