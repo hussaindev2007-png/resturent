@@ -310,7 +310,7 @@ function FilterBy({
   selectedCategories,
   selectedRating,
   initPriceRange,
-  priceRange,         // ✅ original API range for price slider
+  priceRange,        
   setSelectedRating,
   setSelectedCategories,
   setInitPriceRange,
@@ -322,27 +322,26 @@ function FilterBy({
   showSearch,
   setSearch,
 }) {
-  // Clear All Filters
+ 
   const clearFilter = () => {
     setSelectedCategories([]);
     setSelectedRating(0);
 
-    // Reset price using original API range
+    
     setInitPriceRange({ min: priceRange.min, max: priceRange.max });
 
     setSortOption("none");
     setSearch("");
   };
 
-  // Remove specific category
+ 
   const removeCategory = (cat) => {
     setSelectedCategories((prev) => prev.filter((c) => c !== cat));
   };
 
-  // Remove rating
+
   const removeRating = () => setSelectedRating(0);
 
-  // Reset price filter
   const removePrice = () =>
     setInitPriceRange({ min: priceRange.min, max: priceRange.max });
 
@@ -351,7 +350,7 @@ function FilterBy({
       <div className="flex items-center gap-2 flex-wrap">
         <span className="font-semibold">Filtered By:</span>
 
-        {/* Selected Categories */}
+    
         {selectedCategories.map((cat) => (
           <span
             key={cat}
@@ -367,7 +366,7 @@ function FilterBy({
           </span>
         ))}
 
-        {/* Selected Rating */}
+        
         {selectedRating > 0 && (
           <span className="bg-slate-600 px-3 py-1 rounded-full flex items-center gap-2">
             Rating: {selectedRating}
@@ -380,7 +379,7 @@ function FilterBy({
           </span>
         )}
 
-        {/* Price Filter */}
+       
         {initPriceRange.max !== priceRange.max && (
           <span className="bg-cyan-600 px-3 py-1 rounded-full flex items-center gap-2">
             Up to ${initPriceRange.max}
@@ -393,7 +392,7 @@ function FilterBy({
           </span>
         )}
 
-        {/* Clear All */}
+        
         {(selectedCategories.length > 0 ||
           selectedRating > 0 ||
           initPriceRange.max !== priceRange.max) && (
@@ -405,14 +404,14 @@ function FilterBy({
           </button>
         )}
 
-        {/* Sorting */}
+       
         <Sortproduct
           sort={sortOption}
           setSort={setSortOption}
           filtered={filteredProducts}
         />
 
-        {/* Search */}
+
         <Search
           search={search}
           showSearch={showSearch}
@@ -425,3 +424,4 @@ function FilterBy({
 }
 
 export default FilterBy;
+
