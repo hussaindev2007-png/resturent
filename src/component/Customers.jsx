@@ -1,75 +1,4 @@
-// import Navbar from "./Navbar";
-// import Sidebar from "./sidebar";
-// import { motion } from "framer-motion";
 
-// const customersData = [
-//   { id: 1, name: "Ali Khan", email: "ali@example.com", phone: "0300-1234567", totalOrders: 5 },
-//   { id: 2, name: "Sara Ali", email: "sara@example.com", phone: "0301-7654321", totalOrders: 3 },
-//   { id: 3, name: "Ahmed Raza", email: "ahmed@example.com", phone: "0302-1112223", totalOrders: 2 },
-//   { id: 4, name: "Zara Khan", email: "zara@example.com", phone: "0303-9876543", totalOrders: 7 },
-// ];
-
-// export default function Customers() {
-//   return (
-//     <div className="flex h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-//       <Sidebar />
-//       <div className="flex-1 flex flex-col">
-//         <Navbar />
-
-//         <main className="p-6 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-//           <h1 className="text-2xl font-bold mb-6">Customers</h1>
-
-//           <div className="overflow-x-auto">
-//             <table className="min-w-full bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
-//               <thead className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">
-//                 <tr>
-//                   <th className="py-3 px-6 text-left">ID</th>
-//                   <th className="py-3 px-6 text-left">Name</th>
-//                   <th className="py-3 px-6 text-left">Email</th>
-//                   <th className="py-3 px-6 text-left">Phone</th>
-//                   <th className="py-3 px-6 text-left">Total Orders</th>
-//                 </tr>
-//               </thead>
-//               <tbody>
-//                 {customersData.map((cust, index) => (
-//                   <motion.tr
-//                     key={cust.id}
-//                     initial={{ opacity: 0, y: 15 }}
-//                     animate={{ opacity: 1, y: 0 }}
-//                     transition={{ duration: 0.4, delay: index * 0.1 }}
-//                     className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
-//                   >
-//                     <td className="py-3 px-6">{cust.id}</td>
-//                     <td className="py-3 px-6">{cust.name}</td>
-//                     <td className="py-3 px-6">{cust.email}</td>
-//                     <td className="py-3 px-6">{cust.phone}</td>
-//                     <td className="py-3 px-6">{cust.totalOrders}</td>
-//                   </motion.tr>
-//                 ))}
-//               </tbody>
-//             </table>
-//           </div>
-//         </main>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Customers.jsx
 import Navbar from "./Navbar";
 import Sidebar from "./sidebar";
 import { motion } from "framer-motion";
@@ -193,3 +122,4 @@ export default function Customers() {
     </div>
   );
 }
+
