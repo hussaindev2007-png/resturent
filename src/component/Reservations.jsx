@@ -1,88 +1,4 @@
 
-// import Navbar from "./Navbar";
-// import Sidebar from "./Sidebar";
-// import { motion } from "framer-motion";
-
-// const reservationsData = [
-//   { id: 1, customer: "Ali Khan", date: "2025-12-03", time: "7:00 PM", people: 4, status: "Confirmed" },
-//   { id: 2, customer: "Sara Ali", date: "2025-12-03", time: "8:00 PM", people: 2, status: "Pending" },
-//   { id: 3, customer: "Ahmed Raza", date: "2025-12-04", time: "6:30 PM", people: 3, status: "Cancelled" },
-//   { id: 4, customer: "Zara Khan", date: "2025-12-04", time: "7:30 PM", people: 5, status: "Confirmed" },
-// ];
-
-// export default function Reservations() {
-//   return (
-//     <div className="flex h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
-//       <Sidebar />
-//       <div className="flex-1 flex flex-col">
-//         <Navbar />
-
-//         <main className="p-6 text-gray-900 dark:text-gray-100 transition-colors duration-300">
-//           <h1 className="text-2xl font-bold mb-6">Reservations</h1>
-
-//           <div className="overflow-x-auto">
-//             <table className="min-w-full bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
-//               <thead className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">
-//                 <tr>
-//                   <th className="py-3 px-6 text-left">ID</th>
-//                   <th className="py-3 px-6 text-left">Customer</th>
-//                   <th className="py-3 px-6 text-left">Date</th>
-//                   <th className="py-3 px-6 text-left">Time</th>
-//                   <th className="py-3 px-6 text-left">People</th>
-//                   <th className="py-3 px-6 text-left">Status</th>
-//                 </tr>
-//               </thead>
-//               <tbody>
-//                 {reservationsData.map((res, index) => (
-//                   <motion.tr
-//                     key={res.id}
-//                     initial={{ opacity: 0, y: 15 }}
-//                     animate={{ opacity: 1, y: 0 }}
-//                     transition={{ duration: 0.4, delay: index * 0.1 }}
-//                     className="border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
-//                   >
-//                     <td className="py-3 px-6">{res.id}</td>
-//                     <td className="py-3 px-6">{res.customer}</td>
-//                     <td className="py-3 px-6">{res.date}</td>
-//                     <td className="py-3 px-6">{res.time}</td>
-//                     <td className="py-3 px-6">{res.people}</td>
-//                     <td
-//                       className={`py-3 px-6 font-semibold ${
-//                         res.status === "Confirmed"
-//                           ? "text-green-500"
-//                           : res.status === "Pending"
-//                           ? "text-yellow-500"
-//                           : "text-red-500"
-//                       }`}
-//                     >
-//                       {res.status}
-//                     </td>
-//                   </motion.tr>
-//                 ))}
-//               </tbody>
-//             </table>
-//           </div>
-//         </main>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Reservations.jsx
 import Navbar from "./Navbar";
 import Sidebar from "./sidebar";
 import { motion } from "framer-motion";
@@ -219,3 +135,4 @@ export default function Reservations() {
     </div>
   );
 }
+
