@@ -14,7 +14,7 @@ export function CartProvider({ children }) {
     );
 
     if (existing) {
-      // Quantity update with max 5
+      
       const updatedCart = cartItems.map((item) =>
         item.id === product.id && item.CardGifts === gift
           ? { ...item, quantity: Math.min(5, item.quantity + quantity) }
@@ -64,7 +64,7 @@ export function CartProvider({ children }) {
         updateCartQty,
         removeCartItem,
         totalCartPrice,
-        totalCartItems, // ye basket uper quantity show karne ke liye
+        totalCartItems, 
       }}
     >
       {children}
@@ -73,3 +73,4 @@ export function CartProvider({ children }) {
 }
 
 export const useCart = () => useContext(CartContext);
+
